@@ -65,9 +65,6 @@ export default class News extends Component {
               </TouchableOpacity>
             </View>
             <View style={styles.newsDisplay}>
-              {index === 0 && loadingNews === false && (
-                <Text style={styles.info}>News loaded</Text>
-              )}
               {index === 1 && <GridView allNews={this.state.allNews} />}
               {index === 2 && <CompactView allNews={this.state.allNews} />}
               {index === 3 && <LargeView allNews={this.state.allNews} />}
