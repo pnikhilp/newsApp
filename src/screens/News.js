@@ -35,7 +35,7 @@ export default class News extends Component {
       });
   };
   render() {
-    const {loadingNews, index} = this.state;
+    const {loadingNews, allNews, index} = this.state;
     return (
       <View style={styles.container}>
         {loadingNews ? (
@@ -65,9 +65,9 @@ export default class News extends Component {
               </TouchableOpacity>
             </View>
             <View style={styles.newsDisplay}>
-              {index === 1 && <GridView allNews={this.state.allNews} />}
-              {index === 2 && <CompactView allNews={this.state.allNews} />}
-              {index === 3 && <LargeView allNews={this.state.allNews} />}
+              {index === 1 && <GridView allNews={allNews} />}
+              {index === 2 && <CompactView allNews={allNews} />}
+              {index === 3 && <LargeView allNews={allNews} />}
             </View>
           </View>
         )}
