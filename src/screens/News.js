@@ -48,19 +48,19 @@ export default class News extends Component {
               <TouchableOpacity
                 onPress={() => this.setState({index: 1})}
                 activeOpacity={0.7}
-                style={styles.button}>
+                style={[styles.button, {borderWidth: index === 1 ? 2 : 1}]}>
                 <Text style={styles.title}>Grid</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => this.setState({index: 2})}
                 activeOpacity={0.7}
-                style={styles.button}>
+                style={[styles.button, {borderWidth: index === 2 ? 2 : 1}]}>
                 <Text style={styles.title}>Compact</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => this.setState({index: 3})}
                 activeOpacity={0.7}
-                style={styles.button}>
+                style={[styles.button, {borderWidth: index === 3 ? 2 : 1}]}>
                 <Text style={styles.title}>Large</Text>
               </TouchableOpacity>
             </View>
@@ -107,7 +107,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFF',
-    borderWidth: 1,
     borderRadius: 4,
   },
   newsDisplay: {flex: 85, backgroundColor: '#FFF'},
